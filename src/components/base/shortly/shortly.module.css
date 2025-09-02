@@ -1,0 +1,15 @@
+.shortly {
+  width: 100%;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background-color: var(--ant-color-primary);
+}
+
+.shortly .text {
+  color: var(--ant-color-text-light-solid);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-heading-1);
+}

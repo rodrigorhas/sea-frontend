@@ -1,9 +1,11 @@
 import { Shortly } from "@/src/components/base/shortly/Shortly";
 
-export default function Home() {
+const ShortlyPage = () => {
   return (
-    <div style={{ width: "100%", height: "100%" }}>
+    <div>
       <Shortly />
     </div>
   );
-}
+};
+
+export default ShortlyPage;

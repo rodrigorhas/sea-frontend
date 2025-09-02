@@ -1,0 +1,20 @@
+.container {
+  justify-content: space-between;
+  .btn {
+    background-color: var(--ant-color-primary);
+    width: 194px;
+    height: 32px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--ant-color-text-light-solid);
+    cursor: pointer;
+    user-select: none;
+    &.hidden {
+      background-color: var(--ant-color-text);
+      pointer-events: none;
+      cursor: not-allowed;
+    }
+  }
+}
