@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "lint": "eslint",
+    "dev": "concurrently \"npm run start:json-server\"  \"next dev --turbopack\"",
     "build": "next build --turbopack",
-    "start": "next start",
-    "lint": "eslint"
+    "start": "concurrently \"npm run start:json-server\" \"next start\"",
+    "start:json-server": "node src/server.js"
   },
   "dependencies": {
     "@ant-design/icons": "^6.0.0",
@@ -14,7 +15,8 @@
     "dayjs": "^1.11.18",
     "next": "15.5.2",
     "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "react-dom": "19.1.0",
+    "json-server": "0.17.4"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
@@ -23,6 +25,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.5.2",
-    "typescript": "^5"
+    "typescript": "^5",
+    "concurrently": "9.1.0"
   }
 }
