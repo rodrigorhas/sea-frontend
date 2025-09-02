@@ -91,12 +91,14 @@ const EmployeeList: React.FC<EmployeeListProps> = ({
           <Card key={employee.id} className="employee-card">
             <div className="employee-info">
               <div className="employee-details">
-                <Text strong className="employee-name">{employee.name}</Text>
-                <Text className="employee-cpf">{employee.cpf}</Text>
-                <Tag color={employee.isActive ? 'blue' : 'default'}>
-                  {employee.isActive ? 'Ativo' : 'Inativo'}
-                </Tag>
-                <Tag color="blue">{employee.position}</Tag>
+                <Text className="employee-name">{employee.name}</Text>
+                <div>
+                  <Tag>{employee.cpf}</Tag>
+                  <Tag color={employee.isActive ? 'blue' : 'default'}>
+                    {employee.isActive ? 'Ativo' : 'Inativo'}
+                  </Tag>
+                  <Tag color="blue">{employee.position}</Tag>
+                </div>
               </div>
               <Dropdown
                 menu={{ items: getMenuItems(employee) }}

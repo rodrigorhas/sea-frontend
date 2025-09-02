@@ -2,7 +2,12 @@ import type { Metadata } from "next";
 import { Ubuntu } from "next/font/google";
 import "./globals.css";
 
-const ubuntu = Ubuntu({weight: '300'});
+const ubuntu = Ubuntu({
+  weight: ['300', '400', '500', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-ubuntu'
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${ubuntu.className}`}>
+      <body className={`${ubuntu.variable} ${ubuntu.className}`}>
         {children}
       </body>
     </html>

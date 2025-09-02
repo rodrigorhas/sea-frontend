@@ -203,7 +203,7 @@ a {
 
 .employee-card {
   margin-bottom: 12px;
-  border-radius: 6px;
+  border-radius: 10px;
   background: rgba(100, 159, 191, 0.20);
   border: none;
 }
@@ -219,19 +219,18 @@ a {
   gap: 16px;
   align-items: center;
   flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .employee-name {
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 24px;
+  font-weight: 300;
   min-width: 200px;
-  color: #333;
+  color: #707070;
 }
 
-.employee-cpf {
-  color: #666;
-  min-width: 150px;
-  font-size: 14px;
+.employee-controls button {
+  padding: 1.5rem;
 }
 
 .step-completion {
