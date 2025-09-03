@@ -37,7 +37,9 @@ export const ListEmployee = () => {
 
   return (
     <Flex className={styles.card}>
-      <Text className={styles.title}>Funcionário(s)</Text>
+      <Flex className={styles.header}>
+        <Text className={styles.title}>Funcionário(s)</Text>
+      </Flex>
       <Flex className={styles.options}>
         <Button className={`${styles.btn} ${styles.addEmployee}`}>
           <Link

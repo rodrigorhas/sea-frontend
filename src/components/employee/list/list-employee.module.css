@@ -9,17 +9,22 @@
   gap: var(--layout-gap);
   flex-direction: column;
   border-width: 0;
-  .title {
-    width: 100%;
+
+  .header {
     background-color: var(--ant-color-primary);
-    padding: var(--layout-padding);
-    height: 56px;
-    line-height: 0;
+    padding: 8px 24px;
     border-radius: var(--layout-radius) var(--layout-radius) 0 0;
     font-size: var(--ant-font-size-heading-1);
     color: var(--ant-color-text-light-solid);
     font-weight: var(--font-weight-regular);
+    .title {
+      font-size: var(--ant-font-size-heading-1);
+      font-weight: var(--font-weight-regular);
+      color: var(--ant-color-text-light-solid);
+    }
   }
+
+  
   .options {
     padding: 0 var(--layout-padding);
     flex-direction: column;

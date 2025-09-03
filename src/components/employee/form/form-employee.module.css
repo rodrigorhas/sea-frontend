@@ -21,11 +21,15 @@
 
   .header {
     background-color: var(--ant-color-primary);
-    height: 56px;
+    height: 58px;
     border-radius: var(--layout-radius) var(--layout-radius) 0 0;
     padding: 0 var(--layout-padding);
     gap: 10px;
     align-items: center;
+
+    a {
+      height: 24px;
+    }
 
     .title {
       color: var(--ant-color-text-light-solid);

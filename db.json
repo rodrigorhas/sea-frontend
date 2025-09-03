@@ -1,21 +1,25 @@
 {
   "employees": [
     {
-      "status": false,
+      "status": true,
       "name": "Rodrigo Henrique Aguiar da Silva",
       "gender": "male",
       "cpf": "612.355.343-75",
       "birth": "08/08/1998",
       "rg": "4294800",
       "job": "project_manager",
-      "epi": true,
+      "epi": false,
       "epi_list": [
         {
-          "activity": "",
+          "activity": "agriculture",
           "epi_items": [
             {
-              "epi_type": "",
-              "ca_num": ""
+              "epi_type": "reflective_vest",
+              "ca_num": 123
+            },
+            {
+              "epi_type": "reflective_vest",
+              "ca_num": 442
             }
           ]
         }
