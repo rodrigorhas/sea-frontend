@@ -1,0 +1,54 @@
+.card {
+  background-color: var(--ant-color-bg-base);
+  border-radius: 10px;
+
+  &.active {
+    background-color: var(--color-primary-opacity);
+  }
+
+  .desc {
+    padding: 16px;
+    flex-direction: column;
+    width: 100%;
+
+    .name {
+      font-size: var(--ant-font-size-heading-2);
+      font-weight: var(--font-weight-regular);
+      color: var(--ant-color-text-heading);
+    }
+
+    .tags {
+      gap: 16px;
+      .tag {
+        background-color: var(--ant-color-primary);
+        color: var(--ant-color-text-light-solid);
+        border-radius: 36px;
+        font-size: var(--ant-font-size-icon);
+        margin: 0;
+        border: unset;
+      }
+    }
+  }
+
+  .options {
+    .btn {
+      border: unset;
+      background-color: transparent;
+      height: 100%;
+      width: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0 10px 10px 0;
+      background-color: var(--ant-color-primary);
+    }
+  }
+}
+
+.popover {
+  .btn {
+    width: 100%;
+    border: unset;
+    box-shadow: unset;
+  }
+}

@@ -1,0 +1,19 @@
+.container {
+  justify-content: start;
+  align-items: start;
+  box-shadow: var(--layout-shadow);
+  .card {
+    max-width: 460px;
+    width: 100%;
+    padding: var(--layout-padding);
+    background-color: var(--ant-color-bg-layout);
+    border-radius: var(--layout-radius);
+    box-shadow: var(--layout-shadow);
+    border-color: unset;
+    border-width: 0;
+    .flex {
+      flex-direction: column;
+      gap: 32px;
+    }
+  }
+}

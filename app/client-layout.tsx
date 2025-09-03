@@ -23,7 +23,7 @@ export default function ClientLayout({
     "layout-gap": "25px",
     "layout-padding": "24px",
     "layout-radius": "20px",
-    "layout-shadow": "0 2 23 0 #0000000D",
+    "layout-shadow": "0px 2px 23px 0px #0000000D",
   
     "font-family": "'Ubuntu', sans-serif",
     "color-text-heading": "#707070",

@@ -1,0 +1,80 @@
+.card {
+  width: 100%;
+  max-width: 762px;
+  display: flex;
+  background-color: var(--ant-color-bg-layout);
+  border-radius: var(--layout-radius);
+  box-shadow: var(--layout-shadow);
+  border-color: unset;
+  gap: var(--layout-gap);
+  flex-direction: column;
+  border-width: 0;
+  .title {
+    width: 100%;
+    background-color: var(--ant-color-primary);
+    padding: var(--layout-padding);
+    height: 56px;
+    line-height: 0;
+    border-radius: var(--layout-radius) var(--layout-radius) 0 0;
+    font-size: var(--ant-font-size-heading-1);
+    color: var(--ant-color-text-light-solid);
+    font-weight: var(--font-weight-regular);
+  }
+  .options {
+    padding: 0 var(--layout-padding);
+    flex-direction: column;
+    gap: 15px;
+
+    .btn {
+      background-color: transparent;
+      border: 1px solid var(--ant-color-primary);
+      border-radius: 10px;
+      color: var(--ant-color-primary);
+      height: 66px;
+
+      .link {
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+      }
+
+      & .addEmployee {
+        width: 100%;
+      }
+    }
+
+    .row {
+      justify-content: space-between;
+      gap: 15px;
+      align-items: center;
+      .subOptions {
+        gap: 15px;
+        .btn {
+          height: 33px;
+          &.active {
+            border-color: var(--ant-color-text);
+            color: var(--ant-color-text);
+          }
+        }
+      }
+    }
+  }
+
+  .status {
+    justify-content: end;
+    gap: 15px;
+    padding: 0 var(--layout-padding) var(--layout-padding) var(--layout-padding);
+    .text {
+      font-size: var(--ant-font-size-icon);
+      font-weight: var(--font-weight-regular);
+    }
+  }
+
+  .listEmployee {
+    flex-direction: column;
+    padding: 0 var(--layout-padding);
+    gap: 16px;
+  }
+}

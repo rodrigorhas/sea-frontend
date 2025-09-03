@@ -15,7 +15,7 @@ export default function ClientLayout({
         gap: "var(--layout-gap)",
       }}
     >
-      {/*<StepsEmployee />*/}
+      <StepsEmployee />
       <Flex
         style={{
           width: "100%",
@@ -33,7 +33,7 @@ export default function ClientLayout({
         >
           {children}
         </Flex>
-        {/*<NextAndPrevEmployee />*/}
+        <NextAndPrevEmployee />
       </Flex>
     </Flex>
   );

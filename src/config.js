@@ -6,6 +6,9 @@ import { SitemapIcon } from "@/src/assets/sitemap-icon";
 import { TimeLoopIcon } from "@/src/assets/time-loop-icon";
 import { UserIcon } from "@/src/assets/user-icon";
 
+import { DescEmployee } from "@/src/components/employee/desc/DescEmployee";
+import { FormEmployee } from "@/src/components/employee/form/FormEmployee";
+import { ListEmployee } from "@/src/components/employee/list/ListEmployee";
 
 export default {
     BASE_URL: process.env.REACT_APP_BASE_URL || "http://localhost:3001",
@@ -70,5 +73,21 @@ export default {
         },
       ],
       steps: [
+        {
+          content: {
+            form: (
+                <>
+                  <DescEmployee/>
+                  <FormEmployee/>
+                </>
+            ),
+            list: (
+                <>
+                  <DescEmployee/>
+                  <ListEmployee/>
+                </>
+            ),
+          },
+        },
       ]
 };
