@@ -1,12 +1,12 @@
 "use client";
 import { EnterpriseFilledIcon } from "@/src/assets/enterprise-filled-icon";
-import { useEmployeeContext } from "@/src/providers/employee/EmployeeProvider";
+import { useEmployee } from "@/src/hooks/useEmployee";
 import { Card, Flex, Typography } from "antd";
 
 import styles from "./steps-employee.module.css";
 
 export const StepsEmployee = () => {
-  const totalSteps = 9;
+  const { totalSteps } = useEmployee();
 
   return (
     <Flex className={styles.container}>
@@ -23,10 +23,9 @@ export const StepsEmployee = () => {
 
 const StepItem = ({ num }: { num: number }) => {
   const { Text } = Typography;
+  const { stepCurrent } = useEmployee();
 
   const title = `Item ${num + 1}`;
-
-  const { stepCurrent } = useEmployeeContext();
 
   return (
     <Flex className={styles.item}>

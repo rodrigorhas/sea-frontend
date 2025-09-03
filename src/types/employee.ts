@@ -6,16 +6,22 @@ export interface EPI {
 }
 
 export interface Employee {
-  id: string;
+  id?: string;
   name: string;
   cpf: string;
   rg: string;
-  gender: 'Feminino' | 'Masculino';
-  birthDate: string;
-  position: string;
-  isActive: boolean;
-  epis: EPI[];
+  gender: 'female' | 'male';
+  birthDate?: string;
+  birth?: string;
+  position?: string;
+  job?: string;
+  isActive?: boolean;
+  status?: boolean;
+  epis?: EPI[];
+  epi?: boolean;
+  epi_list?: any[];
   healthCertificate?: string;
+  health_certificate?: File | null;
 }
 
 export interface Step {

@@ -4,7 +4,7 @@ import { Button, Divider, Flex, Popover, Tag, Typography } from "antd";
 
 import styles from "./list-item-employee.module.css";
 import { DotsIcon } from "@/src/assets/dots-icon";
-import { Employee } from "@/src/types/FormEmployeeProps";
+import { Employee } from "@/src/types/employee";
 import Link from "next/link";
 import { useAppDispatch } from "@/src/hooks/useAppSelector";
 import { deleteEmployee } from "@/src/redux/slices/employeeSlice";

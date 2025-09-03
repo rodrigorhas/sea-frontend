@@ -1,12 +1,9 @@
-import { EmployeeProvider } from "@/src/providers/employee/EmployeeProvider";
 import ClientLayout from "./client-layout";
 
-const EmployeeLayout = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <EmployeeProvider>
-      <ClientLayout>{children}</ClientLayout>
-    </EmployeeProvider>
-  );
-};
-
-export default EmployeeLayout;
+export default function EmployeeLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return <ClientLayout>{children}</ClientLayout>;
+}

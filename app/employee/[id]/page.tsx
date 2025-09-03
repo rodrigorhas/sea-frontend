@@ -1,12 +1,12 @@
 "use client";
 import { Shortly } from "@/src/components/base/shortly/Shortly";
 import Config from "@/src/config";
-import { useEmployeeContext } from "@/src/providers/employee/EmployeeProvider";
+import { useEmployee } from "@/src/hooks/useEmployee";
 
-const EmployeeAddPage = () => {
-  const { stepCurrent } = useEmployeeContext();
+const EmployeeEditPage = () => {
+  const { stepCurrent } = useEmployee();
 
   return Config.steps[stepCurrent]?.content?.form || <Shortly />;
 };
 
-export default EmployeeAddPage;
+export default EmployeeEditPage;

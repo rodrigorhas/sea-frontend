@@ -1,19 +1,18 @@
 "use client";
 import { Flex } from "antd";
+import { useEmployee } from "@/src/hooks/useEmployee";
 
 import styles from "./next-and-prev-employee.module.css";
-import { useEmployeeContext } from "@/src/providers/employee/EmployeeProvider";
 
 export const NextAndPrevEmployee = () => {
-  const { setStepCurrent, stepCurrent, totalSteps, stepApproved } =
-    useEmployeeContext();
+  const { setStep, stepCurrent, totalSteps, stepApproved } = useEmployee();
 
   const handlePrev = () => {
-    return setStepCurrent(stepCurrent - 1);
+    return setStep(stepCurrent - 1);
   };
 
   const handleNext = () => {
-    return setStepCurrent(stepCurrent + 1);
+    return setStep(stepCurrent + 1);
   };
 
   return (

@@ -20,7 +20,7 @@ import {
   updateEmployee,
 } from "@/src/redux/slices/employeeSlice";
 import { useAppDispatch, useAppSelector } from "@/src/hooks/useAppSelector";
-import { Employee } from "@/src/types/FormEmployeeProps";
+import { Employee } from "@/src/types/employee";
 
 export const FormEmployee = () => {
   const { Text } = Typography;

@@ -5,19 +5,19 @@ import { useEffect } from "react";
 import styles from "./list-employee.module.css";
 import { ListItemEmployee } from "./item/ListItemEmployee";
 import { CheckboxEmployee } from "../checkbox/CheckboxEmployee";
-import { useEmployeeContext } from "@/src/providers/employee/EmployeeProvider";
+import { useEmployee } from "@/src/hooks/useEmployee";
 import Link from "next/link";
 import { useState } from "react";
-import { useAppDispatch, useAppSelector } from "@/src/hooks/useAppSelector";
-import { fetchEmployees } from "@/src/redux/slices/employeeSlice";
 import Config from "@/src/config";
 
 export const ListEmployee = () => {
   const { Text } = Typography;
-  const dispatch = useAppDispatch();
-  const employees = useAppSelector((state) => state.employees.employees);
-
-  const { setStepApproved, totalSteps } = useEmployeeContext();
+  const { 
+    employees, 
+    setApproved, 
+    totalSteps, 
+    fetchAllEmployees 
+  } = useEmployee();
 
   const [filtered, setFiltered] = useState(false);
 
@@ -32,8 +32,8 @@ export const ListEmployee = () => {
   const [isChecked, setIsChecked] = useState(false);
 
   useEffect(() => {
-    dispatch(fetchEmployees());
-  }, [dispatch]);
+    fetchAllEmployees();
+  }, []);
 
   return (
     <Flex className={styles.card}>
@@ -77,7 +77,7 @@ export const ListEmployee = () => {
       </Flex>
       <Flex className={styles.listEmployee}>
         {employees
-          .filter((item) => (filtered ? item.status : item))
+          .filter((item) => (filtered ? item.status === true : true))
           .map((employee) => {
             return <ListItemEmployee key={employee.id} employee={employee} />;
           })}
@@ -87,7 +87,7 @@ export const ListEmployee = () => {
         <CheckboxEmployee
           label={isChecked ? "Sim" : "Não"}
           onChange={(e) => {
-            setStepApproved(e ? totalSteps : 0);
+            setApproved(e ? totalSteps : 0);
             setIsChecked(e);
           }}
         />
